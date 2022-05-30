@@ -485,13 +485,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    附：虚拟机镜像
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -543,8 +536,23 @@
   
   
     <li class="md-nav__item">
+      <a href="https://guyuehome.com/bubble/index" class="md-nav__link">
+        教程问答
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://www.guyuehome.com" class="md-nav__link">
-        博客泡泡
+        博客泡圈
       </a>
     </li>
   
@@ -573,23 +581,8 @@
   
   
     <li class="md-nav__item">
-      <a href="https://guyuehome.com/bubble/index" class="md-nav__link">
-        教程问答
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../about/" class="md-nav__link">
-        关于教程
+        关于我们
       </a>
     </li>
   
@@ -772,13 +765,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    附：虚拟机镜像
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -809,9 +795,9 @@
 <p>所以一般情况下，我们常用到的Linux系统，都是各种各样的发行版，比如Ubuntu、Fedora、RedHat等等，每一个发行版都有其适用的场景，比如RedHat适合商业应用、CentOS适合服务器、Ubuntu、Fedora适合个人使用等，每一个版本的界面不太一样，但核心都是Linux，操作方法基本相同。</p>
 <hr />
 <h2 id="ubuntu"><strong>Ubuntu系统简介</strong></h2>
-<p>我们后续课程使用到的Linux发行版就是ubuntu系统。</p>
+<p>我们后续课程使用到的Linux发行版就是<strong>ubuntu系统</strong>。</p>
 <p><img alt="image-20220523190511789" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/image-20220523190511789.png" /></p>
-<p>Ubuntu诞生于2004年10月份，每六个月发布一个新版本，用户可以一直免费升级使用，我们常用的浏览器、文件编辑器、通讯软件等一应俱全。在软件开发领域，无论是互联网开发，还是人工智能开发，还是大家关注的机器人开发，Ubuntu都占据绝对重要的位置。</p>
+<p>Ubuntu诞生于2004年10月份，<strong>每六个月发布一个新版本</strong>，用户可以一直免费升级使用，我们常用的浏览器、文件编辑器、通讯软件等一应俱全。在软件开发领域，无论是互联网开发，还是人工智能开发，还是大家关注的机器人开发，Ubuntu都占据绝对重要的位置。</p>
 <p>Ubuntu的版本变动比较快，如何选择合适自己使用的版本很重要，因为其中各种软件版本不同会直接影响我们上层应用的移植效果。在选择版本的时候，大家可以关注一下紧随其后的编号，比如Ubuntu22.04。22代表2022年，04表示2022年的4月份发布，除了04还可能会出现的是10，就是10月份发布，所以从数字编号上就可以看出各个版本发布的顺序。</p>
 <p><img alt="image-20220526082937949" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/image-20220526082937949.png" /></p>
 <p>但是这样依然会有很多版本，为了让更多开发者有一个稳定的系统环境，Ubuntu每隔两年的4月份会发布一个长期支持版，后缀会加LTS，保证5年之内持续维护更新，比如Ubuntu20.04 LTS，Ubuntu22.04 LTS，除此之外的版本都是普通版，只维护18个月，所以大家在选择时，<strong>优先考虑长期支持版</strong>。</p>
@@ -824,10 +810,10 @@
 <h2 id="ubuntu_1"><strong>Ubuntu虚拟机安装</strong></h2>
 <p>虚拟机是一个软件，可以在已有系统之上，构建另外一个虚拟的系统，让多个操作环境同时运行。</p>
 <p>这里我们采用的虚拟机软件叫做vmware，下载地址如下，安装步骤和其他软件相同，请大家自行下载并安装：</p>
-<p><a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html">https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html</a> </p>
+<p><a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" target="_blank">https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html</a> </p>
 <p>准备工作完成后，就可以开始系统安装啦，安装步骤如下：</p>
 <h3 id="1">1. 下载系统镜像</h3>
-<p>下载链接：<a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a> </p>
+<p>下载链接：<a href="https://ubuntu.com/download/desktop" target="_blank">https://ubuntu.com/download/desktop</a> </p>
 <p><img alt="image12" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/image12.png" /></p>
 <h3 id="2">2. 在虚拟机中创建系统</h3>
 <p><img alt="image-20220523191817446" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/image-20220523191817446.png" /></p>
@@ -859,7 +845,7 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ <span class="nb">echo</span> <span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu </span><span class="k">$(</span><span class="nb">source</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="k">)</span><span class="s2"> main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
 </code></pre></div>
 <blockquote>
-<p>如遇报错“<strong>Failed to connect to raw.githubusercontent.com</strong>”，可参考<a href="https://www.guyuehome.com/37844">https://www.guyuehome.com/37844</a> </p>
+<p>如遇报错“<strong>Failed to connect to raw.githubusercontent.com</strong>”，可参考<a href="https://www.guyuehome.com/37844" target="_blank">https://www.guyuehome.com/37844</a>  </p>
 </blockquote>
 <h3 id="3-ros2">3. 安装ROS2</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ sudo apt update
@@ -895,12 +881,7 @@
 <p><img alt="image-20220523191347938" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/image-20220523191347938.png" /></p>
 <p>关于小海龟中蕴藏的ROS奥义，我们在后续教程中将持续探索。</p>
 <p>至此，ROS2安装成功。</p>
-<h2 id="_3"><strong>附：虚拟机镜像</strong></h2>
-<p>为了方便大家入门学习，我们也提供了预装好ROS2软件和教程代码的虚拟机镜像，有需要的小伙伴可以通过以下链接下载：</p>
-<blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1DVxUgMhXlxnsnfdEZuxw0g">https://pan.baidu.com/s/1DVxUgMhXlxnsnfdEZuxw0g</a> </p>
-<p>提取码：exc6 </p>
-</blockquote>
+<p><img alt="交流群" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/%E4%BA%A4%E6%B5%81%E7%BE%A4.png" /></p>
 <p><a href="https://www.guyuehome.com/" target="_blank"><img alt="图片1" src="../image/1.3_ROS2%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/footer.png" /></a></p>
 
               
