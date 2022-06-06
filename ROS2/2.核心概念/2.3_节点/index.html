@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+      <a href="../2_%E6%A6%82%E5%BF%B5%E6%80%BB%E8%A7%88/" class="md-nav__link">
         核心概念
       </a>
     </li>
@@ -973,7 +973,7 @@
 <p>完整的机器人系统可能并不是一个物理上的整体，比如这样一个的机器人：</p>
 <p><img alt="image-20220526231417594" src="../image/2.3_%E8%8A%82%E7%82%B9/image-20220526231417594.png" /></p>
 <p>在机器人身体里搭载了一台计算机A，它可以通过机器人的眼睛——摄像头，获取外界环境的信息，也可以控制机器人的腿——轮子，让机器人移动到想要去的地方。除此之外，可能还会有另外一台计算机B，放在你的桌子上，它可以远程监控机器人看到的信息，也可以远程配置机器人的速度和某些参数，还可以连接一个摇杆，人为控制机器人前后左右运动。</p>
-<p>这些功能虽然位于不同的计算机中，但都是这款机器人的工作细胞，也就是节点，他们共同组成了一个完整的机器人系统。</p>
+<p><strong>这些功能虽然位于不同的计算机中，但都是这款机器人的工作细胞，也就是节点，他们共同组成了一个完整的机器人系统。</strong></p>
 <ul>
 <li>节点在机器人系统中的职责就是<strong>执行某些具体的任务</strong>，从计算机操作系统的角度来看，也叫做进程；</li>
 <li>每个节点都是一个可以<strong>独立运行的可执行文件</strong>，比如执行某一个python程序，或者执行C++编译生成的结果，都算是运行了一个节点；</li>
@@ -1003,20 +1003,20 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="sd">@说明: ROS2节点示例-发布“Hello World”日志信息, 使用面向过程的实现方式</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kn">import</span> <span class="nn">rclpy</span>                                     <span class="c1"># ROS2 Python接口库</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>                      <span class="c1"># ROS2 节点类</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kn">import</span> <span class="nn">rclpy</span>                                   <span class="c1"># ROS2 Python接口库</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>                    <span class="c1"># ROS2 节点类</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kn">import</span> <span class="nn">time</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>                             <span class="c1"># ROS2节点主入口main函数</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>                        <span class="c1"># ROS2 Python接口初始化</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;node_helloworld&quot;</span><span class="p">)</span>               <span class="c1"># 创建ROS2节点对象并进行初始化</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>                           <span class="c1"># ROS2节点主入口main函数</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>                      <span class="c1"># ROS2 Python接口初始化</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;node_helloworld&quot;</span><span class="p">)</span>             <span class="c1"># 创建ROS2节点对象并进行初始化</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="k">while</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">ok</span><span class="p">():</span>                            <span class="c1"># ROS2系统是否正常运行</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>    <span class="c1"># ROS2日志输出</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>                          <span class="c1"># 休眠控制循环时间</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="k">while</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">ok</span><span class="p">():</span>                          <span class="c1"># ROS2系统是否正常运行</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>  <span class="c1"># ROS2日志输出</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>                        <span class="c1"># 休眠控制循环时间</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>                          <span class="c1"># 销毁节点对象    </span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>                             <span class="c1"># 关闭ROS2 Python接口</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>                        <span class="c1"># 销毁节点对象    </span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>                           <span class="c1"># 关闭ROS2 Python接口</span>
 </code></pre></div>
 <p>完成代码的编写后需要设置功能包的编译选项，让系统知道Python程序的入口，打开功能包的setup.py文件，加入如下入口点的配置：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
@@ -1037,7 +1037,7 @@
 <h2 id="hello-world_1"><strong>案例二：Hello World节点（面向对象）</strong></h2>
 <p>所以在ROS2的开发中，我们更<strong>推荐大家使用面向对象的编程方式</strong>，比如刚才的代码就可以改成这样，虽然看上去复杂了一些，但是代码会具备更好的可读性和可移植性，调试起来也会更加方便。</p>
 <h3 id="_6"><strong>运行效果</strong></h3>
-<p>下来运行一下调整后的节点：</p>
+<p>接下来运行一下调整后的节点：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ ros2 run learning_node node_helloworld_class
 </code></pre></div>
 <p>运行成功后，可以还是可以在终端中看到循环打印“Hello World”字符串的效果。</p>
@@ -1062,17 +1062,17 @@
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="k">class</span> <span class="nc">HelloWorldNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>                       <span class="c1"># ROS2节点父类初始化</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="k">while</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">ok</span><span class="p">():</span>                            <span class="c1"># ROS2系统是否正常运行</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>    <span class="c1"># ROS2日志输出</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>                          <span class="c1"># 休眠控制循环时间</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>                     <span class="c1"># ROS2节点父类初始化</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="k">while</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">ok</span><span class="p">():</span>                          <span class="c1"># ROS2系统是否正常运行</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>  <span class="c1"># ROS2日志输出</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>                        <span class="c1"># 休眠控制循环时间</span>
 <a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>                                 <span class="c1"># ROS2节点主入口main函数</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>                            <span class="c1"># ROS2 Python接口初始化</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="n">node</span> <span class="o">=</span> <span class="n">HelloWorldNode</span><span class="p">(</span><span class="s2">&quot;node_helloworld_class&quot;</span><span class="p">)</span>   <span class="c1"># 创建ROS2节点对象并进行初始化</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>                                 <span class="c1"># 循环等待ROS2退出</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>                              <span class="c1"># 销毁节点对象</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>                                 <span class="c1"># 关闭ROS2 Python接口</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>                               <span class="c1"># ROS2节点主入口main函数</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>                          <span class="c1"># ROS2 Python接口初始化</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="n">node</span> <span class="o">=</span> <span class="n">HelloWorldNode</span><span class="p">(</span><span class="s2">&quot;node_helloworld_class&quot;</span><span class="p">)</span> <span class="c1"># 创建ROS2节点对象并进行初始化</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>                               <span class="c1"># 循环等待ROS2退出</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="n">node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>                            <span class="c1"># 销毁节点对象</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>                               <span class="c1"># 关闭ROS2 Python接口</span>
 </code></pre></div>
 <p>完成代码的编写后需要设置功能包的编译选项，让系统知道Python程序的入口，打开功能包的setup.py文件，加入如下入口点的配置：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
@@ -1174,14 +1174,12 @@
 <p>启动一个终端，运行如下节点：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ ros2 run learning_node node_object_webcam <span class="c1">#注意设置摄像头</span>
 </code></pre></div>
-<blockquote>
-<p><font color=Red><strong>注意</strong></font></p>
-<p>如果是在虚拟机中操作，需要进行以下设置：</p>
-<ol>
-<li>把虚拟机设置为兼容USB3.1；</li>
-<li>在可移动设备中将摄像头连接至虚拟机。</li>
-</ol>
-</blockquote>
+<details class="attention" open="open">
+<summary>Attention</summary>
+<p>如果是在虚拟机中操作，需要进行以下设置：
+1. 把虚拟机设置为兼容USB3.1；
+2. 在可移动设备中将摄像头连接至虚拟机。</p>
+</details>
 <p>运行成功后，该节点就可以驱动摄像头，并且实时识别摄像头中的红色物体啦。</p>
 <p><img alt="image-20220527102431854" src="../image/2.3_%E8%8A%82%E7%82%B9/image-20220527102431854.png" /></p>
 <h3 id="_14"><strong>代码解析</strong></h3>
@@ -1265,7 +1263,7 @@
 <hr />
 <h2 id="_17"><strong>参考链接</strong></h2>
 <p><a href="https://docs.ros.org/en/humble/Tutorials/Understanding-ROS2-Nodes.html" target="_blank">https://docs.ros.org/en/humble/Tutorials/Understanding-ROS2-Nodes.html</a></p>
-<p><a href="https://www.guyuehome.com/" target="_blank"><img alt="图片1" src="../image/2.3_%E8%8A%82%E7%82%B9/footer.png" /></a></p>
+<p><a href="https://www.guyuehome.com/" target="_blank"><img alt="图片1" src="../image/footer.png" /></a></p>
 
               
             </article>

@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2_%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+      <a href="../2_%E6%A6%82%E5%BF%B5%E6%80%BB%E8%A7%88/" class="md-nav__link">
         核心概念
       </a>
     </li>
@@ -892,11 +892,10 @@
 <p><img alt="image-20220528021119863" src="../image/2.10_DDS/image-20220528021119863.png" /></p>
 <p>具体会有哪些策略？比如：</p>
 <ul>
-<li>DEADLINE策略，表示通信数据必须要在每次截止时间内完成一次通信；</li>
-<li>HISTORY策略，表示针对历史数据的一个缓存大小；</li>
-<li>RELIABILITY策略，表示数据通信的模式，配置成BEST_EFFORT，就是尽力传输模式，网络情况不好的时候，也要保证数据流畅，此时可能会导致数据丢失，配置成RELIABLE，就是可信赖模式，可以在通信中尽量保证图像的完整性，我们可以根据应用功能场景选择合适的通信模式；</li>
-<li>DURABILITY策略，可以配置针对晚加入的节点，也保证有一定的历史数据发送过去，可以让新节点快速适应系统。</li>
-<li></li>
+<li><strong>DEADLINE</strong>策略，表示通信数据必须要在每次截止时间内完成一次通信；</li>
+<li><strong>HISTORY</strong>策略，表示针对历史数据的一个缓存大小；</li>
+<li><strong>RELIABILITY</strong>策略，表示数据通信的模式，配置成BEST_EFFORT，就是尽力传输模式，网络情况不好的时候，也要保证数据流畅，此时可能会导致数据丢失，配置成RELIABLE，就是可信赖模式，可以在通信中尽量保证图像的完整性，我们可以根据应用功能场景选择合适的通信模式；</li>
+<li><strong>DURABILITY</strong>策略，可以配置针对晚加入的节点，也保证有一定的历史数据发送过去，可以让新节点快速适应系统。</li>
 </ul>
 <p><img alt="image-20220528021133020" src="../image/2.10_DDS/image-20220528021133020.png" /></p>
 <p>所有这些策略在ROS系统中都可以通过类似这样的结构体配置，如果不配置的话，系统也会使用默认的参数。</p>
@@ -1042,7 +1041,7 @@
 <p><a href="https://docs.ros.org/en/humble/Concepts/About-Different-Middleware-Vendors.html" target="_blank">https://docs.ros.org/en/humble/Concepts/About-Different-Middleware-Vendors.html</a></p>
 <p><a href="https://docs.ros.org/en/humble/How-To-Guides/Working-with-multiple-RMW-implementations.html" target="_blank">https://docs.ros.org/en/humble/How-To-Guides/Working-with-multiple-RMW-implementations.html</a></p>
 <p><a href="https://www.bilibili.com/video/BV12z4y167w2" target="_blank">https://www.bilibili.com/video/BV12z4y167w2</a></p>
-<p><a href="https://www.guyuehome.com/" target="_blank"><img alt="图片1" src="../image/2.10_DDS/footer.png" /></a></p>
+<p><a href="https://www.guyuehome.com/" target="_blank"><img alt="图片1" src="../image/footer.png" /></a></p>
 
               
             </article>
