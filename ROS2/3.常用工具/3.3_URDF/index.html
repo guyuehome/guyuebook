@@ -995,20 +995,20 @@
 <p><img alt="image-20220528144424329" src="../image/3.3_URDF/image-20220528144424329.png" /></p>
 <p>URDF模型文件使用的是<strong>XML格式</strong>，右侧就是一个机器人的URDF描述，乍看上去，有点像网页开发的源代码，都是由一系列尖括号包围的标签和其中的属性组合而成。</p>
 <p>如何使用这样一个文件描述机器人呢？比如这个机械臂，大家可以看下自己的手臂，我们的手臂是由大臂和小臂组成，他们独自是无法运动的，必须通过一个手肘关节连接之后，才能通过肌肉驱动，产生相对运动。</p>
-<p>在建模中，大臂和小臂就类似机器人的这些独立的刚体部分，称为连杆Link，手肘就类似于机器人电机驱动部分，称为关节joint。</p>
+<p>在建模中，大臂和小臂就类似机器人的这些独立的刚体部分，称为<strong>连杆Link</strong>，手肘就类似于机器人电机驱动部分，称为<strong>关节joint</strong>。</p>
 <p>所以在URDF建模过程中，关键任务就是通过这里的&lt;link>和&lt;joint>，理清楚每一个连杆和关节的描述信息。</p>
 <h3 id="link"><strong>连杆Link的描述</strong></h3>
-<p>&lt;link>标签用来描述机器人某个刚体部分的外观和物理属性，外观包括尺寸、颜色、形状，物理属性包括质量、惯性矩阵、碰撞参数等。</p>
+<p>&lt;link>标签用来描述机器人某个刚体部分的<strong>外观和物理属性</strong>，外观包括尺寸、颜色、形状，物理属性包括质量、惯性矩阵、碰撞参数等。</p>
 <p><img alt="image-20220528144534685" src="../image/3.3_URDF/image-20220528144534685.png" /></p>
 <p>以这个机械臂连杆为例，它的link描述如下：</p>
 <p><img alt="image-20220528144549092" src="../image/3.3_URDF/image-20220528144549092.png" /></p>
 <p>link标签中的name表示该连杆的名称，我们可以自定义，未来joint连接link的时候，会使用到这个名称。</p>
 <p>link里边的&lt;visual>部分用来描述机器人的外观，比如：</p>
 <ul>
-<li>&lt;geometry>表示几何形状，里边使用&lt;mesh>调用了一个在三维软件中提前设计好的蓝色外观，就是这个stl文件，看上去和真实机器人是一致的</li>
-<li>&lt;origin>表示坐标系相对初始位置的偏移，分别是x、y、z方向上的平移，和roll、pitch、raw旋转，不需要偏移的话，就全为0。</li>
+<li>&lt;geometry>表示<strong>几何形状</strong>，里边使用&lt;mesh>调用了一个在三维软件中提前设计好的蓝色外观，就是这个stl文件，看上去和真实机器人是一致的</li>
+<li>&lt;origin>表示<strong>坐标系相对初始位置的偏移</strong>，分别是x、y、z方向上的平移，和roll、pitch、raw旋转，不需要偏移的话，就全为0。</li>
 </ul>
-<p>第二个部分&lt;collision>，描述碰撞参数，里边的内容似乎和&lt;visual>一样，也有&lt;geometry>和&lt;origin>，看似相同，其实区别还是比较大的。</p>
+<p>第二个部分&lt;collision>，描述<strong>碰撞参数</strong>，里边的内容似乎和&lt;visual>一样，也有&lt;geometry>和&lt;origin>，看似相同，其实区别还是比较大的。</p>
 <ul>
 <li>&lt;visual>部分重在描述机器人看上去的状态，也就是视觉效果；</li>
 <li>&lt;collision>部分则是描述机器人运动过程中的状态，比如机器人与外界如何接触算作碰撞。</li>
@@ -1039,7 +1039,7 @@
 </ul>
 <details class="info" open="open">
 <summary>Info</summary>
-<p>ROS中关于平移的默认单位都是m，旋转是弧度，不是度，所以这里3.14就表示可以在-180度到180度之间运动，速度也是m/s，或者rad/s。</p>
+<p>ROS中关于平移的默认单位是m，旋转是弧度（不是度），所以这里的3.14就表示可以在-180度到180度之间运动，线速度是m/s，角速度是rad/s。</p>
 </details>
 <h3 id="_2"><strong>完整机器人模型</strong></h3>
 <p><img alt="image-20220528144900705" src="../image/3.3_URDF/image-20220528144900705.png" /></p>

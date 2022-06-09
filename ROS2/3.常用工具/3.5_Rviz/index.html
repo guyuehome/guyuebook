@@ -1086,7 +1086,7 @@
 
 <h1 id="rviz"><strong>Rviz：三维可视化显示平台</strong></h1>
 <p>大家有没有畅想过一个问题，机器人眼中的世界是什么样的呢？如何能够看到机器人摄像头拍摄到的图像？</p>
-<p>这就涉及到可视化显示的范畴了，本讲我们介绍一位ROS中的重量级嘉宾——<strong>Rviz</strong>，一款三维可视化显示的神器。</p>
+<p>这就涉及到可视化显示的范畴了，本讲我们介绍一位ROS中的重量级嘉宾——<strong>Rviz</strong>，一款<strong>三维可视化显示</strong>的神器。</p>
 <h2 id="rviz_1"><strong>Rviz三维可视化平台</strong></h2>
 <p>机器人开发过程中，各种各样的功能，如果我们只是从数据层面去做分析，很难快速理解数据的效果，比如给你一堆0到255的数字，问这幅图像描述的内容是什么？你肯定一脸懵。但如果我们把这些数字通过颜色渲染出来，岂不就一目了然么？</p>
 <p><img alt="image-20220528152054838" src="../image/3.5_Rviz/image-20220528152054838.png" /></p>
@@ -1143,17 +1143,21 @@
 </code></pre></div>
 <p>主要配置项如下：</p>
 <ul>
-<li><sensor>标签：描述传感器<blockquote>
+<li>&lt;sensor>标签：描述传感器</li>
+</ul>
+<blockquote>
 <p>type：传感器类型，camera</p>
 <p>name：摄像头命名，自由设置</p>
 </blockquote>
-</li>
-<li><camera>标签：描述摄像头参数</li>
+<ul>
+<li>&lt;camera>标签：描述摄像头参数</li>
 </ul>
 <blockquote>
-<p>分辨率，编码格式，图像范围，噪音参数等
-- <plugin>标签：加载摄像头仿真插件</p>
+<p>分辨率，编码格式，图像范围，噪音参数等</p>
 </blockquote>
+<ul>
+<li>&lt;plugin>标签：加载摄像头仿真插件</li>
+</ul>
 <h3 id="_4"><strong>运行仿真环境</strong></h3>
 <p>模型已经配置好啦，能不能把摄像头成功仿真出来，并且在Rviz中看到图像信息，我们拭目以待。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ ros2 launch learning_gazebo load_mbot_camera_into_gazebo.launch.py
